@@ -17,7 +17,7 @@ const App = () => {
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
   // WhatsApp Configuration
-  const phoneNumber = "919876543210"; // Replace with actual number
+  const phoneNumber = "919465530005"; // Replace with actual number
   const message = "Sat Sri Akal! I am interested in your coating services.";
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -206,7 +206,7 @@ const App = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Phone</p>
-                    <p className="font-medium">+91 98765 43210</p>
+                    <p className="font-medium">+91 9465530005</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
