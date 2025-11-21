@@ -33,7 +33,7 @@ const App = () => {
               <Paintbrush className="text-white w-6 h-6" />
             </div>
             <span className={`text-2xl font-bold ${scrolled ? 'text-gray-900' : 'text-white'} transition-colors duration-300 group-hover:opacity-90`}>
-              AZ COATING SOLOUTILNS
+              AZ COATING SOLUTIONS
             </span>
           </a>
 
