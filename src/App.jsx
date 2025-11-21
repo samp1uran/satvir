@@ -85,7 +85,7 @@ const App = () => {
 
         <div className="container mx-auto px-4 relative z-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            PREMIUM INDUSTRIAL <span className="text-orange-500">Coating</span> SOLUTIONS
+            PREMIUM INDUSTRIAL <span className="text-orange-500">COATING</span> SOLUTIONS
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
             Providing durable, high-quality powder coating and paint finishes in Ludhiana since 1995.
@@ -157,7 +157,7 @@ const App = () => {
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose AZ COATING SERVICCES ?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">WHY CHOOSE AZ COATING SERVICCES ?</h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="bg-orange-500 p-1 rounded-full mt-1">
