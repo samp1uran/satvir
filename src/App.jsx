@@ -157,7 +157,7 @@ const App = () => {
             />
           </div>
           <div className="md:w-1/2">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose Gobind Coating?</h2>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">Why Choose AZ COATING SERVICCES ?</h2>
             <div className="space-y-4">
               <div className="flex items-start gap-4">
                 <div className="bg-orange-500 p-1 rounded-full mt-1">
