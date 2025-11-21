@@ -85,7 +85,7 @@ const App = () => {
 
         <div className="container mx-auto px-4 relative z-20 text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-            Premium Industrial <span className="text-orange-500">Coating</span> Solutions
+            PREMIUM INDUSTRIAL <span className="text-orange-500">Coating</span> SOLUTIONS
           </h1>
           <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
             Providing durable, high-quality powder coating and paint finishes in Ludhiana since 1995.
