@@ -231,7 +231,18 @@ const App = () => {
             </div>
 
             {/* Google Map for Ludhiana Industrial Area B */}
-            <div class="embed-map-responsive"><div class="embed-map-container"><iframe class="embed-map-frame" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=400&height=400&hl=en&q=Radha%20Swami%20Road%20Near%20Gill%20Road&t=&z=14&ie=UTF8&iwloc=B&output=embed"></iframe><a href="https://sprunkiretake.net" style="font-size:2px!important;color:gray!important;position:absolute;bottom:0;left:0;z-index:1;max-height:1px;overflow:hidden">sprunki retake</a></div><style>.embed-map-responsive{position:relative;text-align:right;width:100%;height:0;padding-bottom:100%;}.embed-map-container{overflow:hidden;background:none!important;width:100%;height:100%;position:absolute;top:0;left:0;}.embed-map-frame{width:100%!important;height:100%!important;position:absolute;top:0;left:0;}</style></div>
+            <div className="h-full min-h-[300px] bg-gray-200 rounded-2xl overflow-hidden relative shadow-lg">
+               <iframe 
+                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d27387.57582079883!2d75.86418566013178!3d30.893753988404862!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a830d51850101%3A0x300a124501099707!2sIndustrial%20Area-B%2C%20Ludhiana%2C%20Punjab!5e0!3m2!1sen!2sin!4v1709900000000!5m2!1sen!2sin" 
+                 width="100%" 
+                 height="100%" 
+                 style={{border:0, minHeight: '300px'}} 
+                 allowFullScreen="" 
+                 loading="lazy" 
+                 referrerPolicy="no-referrer-when-downgrade"
+                 title="Google Map Location"
+               ></iframe>
+            </div>
           </div>
         </div>
       </section>
