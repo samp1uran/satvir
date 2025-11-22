@@ -215,7 +215,7 @@ const App = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Email</p>
-                    <p className="font-medium">info@gobindcoating.com</p>
+                    <p className="font-medium">singhsatvir034@gmail.com</p>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
@@ -224,7 +224,7 @@ const App = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Location</p>
-                    <p className="font-medium"># 2099 ST NO 9 ARJUN NAGAR ON RADHA SWAMI ROAD NEAR GILL ROAD ,<br/>Ludhiana, Punjab 141001</p>
+                    <p className="font-medium"># 2099 ST NO 9 ARJUN NAGAR ON RADHA SWAMI ROAD NEAR GILL ROAD,<br/>LUDHIANA, PUNJAB 141001</p>
                   </div>
                 </div>
               </div>
