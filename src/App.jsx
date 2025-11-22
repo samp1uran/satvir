@@ -224,7 +224,7 @@ const App = () => {
                   </div>
                   <div>
                     <p className="text-sm text-gray-500">Location</p>
-                    <p className="font-medium">Plot No. 123, Industrial Area B,<br/>Ludhiana, Punjab 141001</p>
+                    <p className="font-medium"># 2099 ST NO 9 ARJUN NAGAR ON RADHA SWAMI ROAD NEAR GILL ROAD ,<br/>Ludhiana, Punjab 141001</p>
                   </div>
                 </div>
               </div>
@@ -249,7 +249,7 @@ const App = () => {
 
       {/* Footer */}
       <footer className="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
-        <p>&copy; 2025 Gobind Coating. All Rights Reserved.</p>
+        <p>&copy; 2025 A Z COATING. All Rights Reserved.</p>
         <p className="text-sm mt-2 flex items-center justify-center gap-1">
           Made with ❤️ by 
           <a 
