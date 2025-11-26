@@ -1,6 +1,6 @@
 import Home from './Components/Home'
 import { Route, Routes,Navigate } from 'react-router-dom'
-
+import "bootstrap-icons/font/bootstrap-icons.css";
 const App = () => {
   return (
     <>

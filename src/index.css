@@ -2,3 +2,29 @@
 html {
   scroll-behavior: smooth;
 }
+/* Hide mute/unmute button in Chrome/Edge */
+video::-webkit-media-controls-mute-button {
+  display: none !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+
+/* Optional: Hide volume slider as well */
+video::-webkit-media-controls-volume-slider {
+  display: none !important;
+  pointer-events: none !important;
+  opacity: 0 !important;
+}
+.scroll-track {
+  width: max-content;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

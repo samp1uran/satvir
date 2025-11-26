@@ -14,8 +14,14 @@ import img1 from "../assets/galleryImg1.jpg";
 import img2 from "../assets/galleryImg2.jpg";
 import img3 from "../assets/galleryImg3.jpg";
 import img4 from "../assets/galleryImg4.jpg";
+import painted from "../assets/painted.jpeg";
+import painter from "../assets/painter.jpeg";
+import painter1 from "../assets/painter1.jpeg";
+import painter2 from "../assets/painter2.jpeg";
+import video1 from "../assets/macvide (2).mp4";
+const videoUrls = [video1];
 
-const images = [img1, img2, img3, img4];
+const images = [img1, img2, img3, img4, painted, painter, painter1, painter2];
 import { useNavigate } from "react-router-dom";
 import Navbar from "./Navbar";
 
@@ -141,7 +147,7 @@ const Home = () => {
           </div>
         </section>
 
-        <section id="gallery" className="pt-10 bg-gray-50 pb-10 lg:pb-50">
+        <section id="gallery" className="pt-10 bg-gray-50 pb-10 lg:pb-30">
           <div className="container mx-auto px-4">
             {/* Heading */}
             <div className="text-center mb-12">
@@ -153,21 +159,62 @@ const Home = () => {
               </p>
             </div>
 
-            {/* Image Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {images.map((img, index) => (
-                <div
-                  key={index}
-                  className="relative overflow-hidden rounded-xl shadow-md group"
-                >
-                  <img
-                    src={img}
-                    alt={`Gallery ${index + 1}`}
-                    onClick={() => setSelectedImage(img)}
-                    className="cursor-pointer w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-              ))}
+            {/* Auto Scroll Slider */}
+            <div className="overflow-hidden">
+              <div className="scroll-track flex gap-6">
+                {[...images, ...images].map((img, index) => (
+                  <div
+                    key={index}
+                    className="relative w-[300px] h-64 overflow-hidden rounded-xl shadow-md"
+                  >
+                    <img
+                      src={img}
+                      alt={`Gallery ${index + 1}`}
+                      onClick={() => setSelectedImage(img)}
+                      className="cursor-pointer w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="videos" className=" bg-gray-50 pb-10 lg:pb-20">
+          <div className="container mx-auto px-4">
+            {/* Heading */}
+            <div className="text-center mb-12">
+              <h2 className="text-4xl font-bold text-gray-900">
+                Our Video Gallery
+              </h2>
+              <p className="text-gray-600 mt-2">
+                A glimpse of our industrial processes in action.
+              </p>
+            </div>
+
+            <div className="flex justify-center overflow-hidden ">
+              <video
+                ref={(el) => {
+                  if (el) {
+                    el.muted = true; // FORCE mute
+                    el.volume = 0; // Double mute protection
+                    el.autoplay = false;
+
+                    // Prevent unmute attempts
+                    el.addEventListener("volumechange", () => {
+                      if (el.volume !== 0 || !el.muted) {
+                        el.muted = true;
+                        el.volume = 0;
+                      }
+                    });
+                  }
+                }}
+                muted={true}
+                src={video1}
+                controls
+                // className="w-2/4 h-94 object-cover rounded-2xl duration-500 cursor-pointer"
+                className="cursor-pointer w-full h-64  lg:w-2/4 lg:h-94  object-cover rounded-2xl"
+              />
             </div>
           </div>
         </section>
@@ -321,38 +368,36 @@ const Home = () => {
           href={whatsappLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg z-50 transition-transform hover:scale-110 hover:rotate-12 flex items-center justify-center"
+          className="fixed bottom-6 right-6 z-50 transition-transform hover:scale-110 hover:rotate-12 flex items-center justify-center"
           aria-label="Chat on WhatsApp"
         >
-          <MessageCircle size={32} fill="white" className="text-white" />
+          <i className="bi bi-whatsapp text-green-500  text-4xl"></i>
         </a>
       </div>
       {selectedImage && (
-  <div
-    className="cursor-pointer fixed inset-0 bg-gray-900/40 backdrop-blur-sm flex items-center justify-center z-[9999]"
-  onClick={() => setSelectedImage(null)}
-  >
-    {/* Close Button */}
-    <button
-      className="cursor-pointer absolute top-4 right-4 text-white p-2 text-2xl rounded-full transition"
-      onClick={() => setSelectedImage(null)}
-    >
-      ✕
-    </button>
+        <div
+          className="cursor-pointer fixed inset-0 bg-gray-900/40 backdrop-blur-sm flex items-center justify-center z-[9999]"
+          onClick={() => setSelectedImage(null)}
+        >
+          {/* Close Button */}
+          <button
+            className="cursor-pointer absolute top-4 right-4 text-white p-2 text-2xl rounded-full transition"
+            onClick={() => setSelectedImage(null)}
+          >
+            ✕
+          </button>
 
-    {/* Image */}
-    <img
-      src={selectedImage}
-      onClick={(e)=>{
-        e.stopPropagation()
-      }}
-      className="w-full h-3/4 md:h-9/12 md:w-1/2 object-cover max-h-[90vh] max-w-[90vw] rounded-xl shadow-xl"
-      alt="Full Preview"
-    />
-  </div>
-)}
-
-
+          {/* Image */}
+          <img
+            src={selectedImage}
+            onClick={(e) => {
+              e.stopPropagation();
+            }}
+            className="w-full h-3/4 md:h-9/12 md:w-1/2 object-cover max-h-[90vh] max-w-[90vw] rounded-xl shadow-xl"
+            alt="Full Preview"
+          />
+        </div>
+      )}
     </>
   );
 };
