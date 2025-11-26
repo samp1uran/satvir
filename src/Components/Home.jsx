@@ -7,7 +7,6 @@ import {
   Shield,
   PenTool,
   ArrowRight,
-  MessageCircle,
 } from "lucide-react";
 import Carousel from "./Carousel";
 import img1 from "../assets/galleryImg1.jpg";
@@ -19,7 +18,7 @@ import painter from "../assets/painter.jpeg";
 import painter1 from "../assets/painter1.jpeg";
 import painter2 from "../assets/painter2.jpeg";
 import video1 from "../assets/macvide (2).mp4";
-const videoUrls = [video1];
+import video2 from "../assets/work.mp4";
 
 const images = [img1, img2, img3, img4, painted, painter, painter1, painter2];
 import { useNavigate } from "react-router-dom";
@@ -192,29 +191,54 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="flex justify-center overflow-hidden ">
-              <video
-                ref={(el) => {
-                  if (el) {
-                    el.muted = true; // FORCE mute
-                    el.volume = 0; // Double mute protection
-                    el.autoplay = false;
+            <div className="flex w-full flex-col lg:flex-row justify-center gap-6 overflow-hidden">
+              {/* Video 1 */}
+              <div className="flex justify-center overflow-hidden w-full">
+                <video
+                  ref={(el) => {
+                    if (el) {
+                      el.muted = true;
+                      el.volume = 0;
+                      el.autoplay = false;
 
-                    // Prevent unmute attempts
-                    el.addEventListener("volumechange", () => {
-                      if (el.volume !== 0 || !el.muted) {
-                        el.muted = true;
-                        el.volume = 0;
-                      }
-                    });
-                  }
-                }}
-                muted={true}
-                src={video1}
-                controls
-                // className="w-2/4 h-94 object-cover rounded-2xl duration-500 cursor-pointer"
-                className="cursor-pointer w-full h-64  lg:w-2/4 lg:h-94  object-cover rounded-2xl"
-              />
+                      el.addEventListener("volumechange", () => {
+                        if (el.volume !== 0 || !el.muted) {
+                          el.muted = true;
+                          el.volume = 0;
+                        }
+                      });
+                    }
+                  }}
+                  muted={true}
+                  src={video1}
+                  controls
+                  className="cursor-pointer w-full h-64 object-cover rounded-2xl lg:h-94"
+                />
+              </div>
+
+              {/* Video 2 — SAME CODE */}
+              <div className="flex justify-center overflow-hidden w-full ">
+                <video
+                  ref={(el) => {
+                    if (el) {
+                      el.muted = true;
+                      el.volume = 0;
+                      el.autoplay = false;
+
+                      el.addEventListener("volumechange", () => {
+                        if (el.volume !== 0 || !el.muted) {
+                          el.muted = true;
+                          el.volume = 0;
+                        }
+                      });
+                    }
+                  }}
+                  muted={true}
+                  src={video2}
+                  controls
+                  className="cursor-pointer w-full h-64  lg:h-94  object-cover rounded-2xl"
+                />
+              </div>
             </div>
           </div>
         </section>
