@@ -255,7 +255,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                WHY CHOOSE AZ COATING SERVICCES ?
+                WHY CHOOSE A Z COATING SERVICCES ?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
