@@ -39,7 +39,7 @@ const Navbar = () => {
               scrolled ? "text-gray-900" : "text-white"
             } transition-colors duration-300 group-hover:opacity-90`}
           >
-            AZ COATING SOLUTIONS
+            A Z COATING SOLUTIONS
           </span>
         </div>
 
