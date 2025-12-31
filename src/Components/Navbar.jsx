@@ -35,7 +35,7 @@ const Navbar = () => {
             alt=""
           />
           <span
-            className={`text-2xl font-bold ${
+            className={`text-2xl font-bold text-center ${
               scrolled ? "text-gray-900" : "text-white"
             } transition-colors duration-300 group-hover:opacity-90`}
           >
