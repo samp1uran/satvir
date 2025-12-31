@@ -255,7 +255,7 @@ const Home = () => {
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                WHY CHOOSE A Z COATING SERVICCES ?
+                WHY CHOOSE AZ COATING SERVICCES ?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -373,7 +373,7 @@ const Home = () => {
 
         {/* Footer */}
         <footer className="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
-          <p>&copy; 2025 A Z COATING. All Rights Reserved.</p>
+          <p>&copy; 2025 AZ COATING. All Rights Reserved.</p>
           <p className="text-sm mt-2 flex items-center justify-center gap-1">
             Made with ❤️ by
             <a
