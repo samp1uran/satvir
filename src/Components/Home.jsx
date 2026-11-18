@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import {
   Phone,
   Mail,
@@ -13,19 +13,57 @@ import img1 from "../assets/galleryImg1.jpg";
 import img2 from "../assets/galleryImg2.jpg";
 import img3 from "../assets/galleryImg3.jpg";
 import img4 from "../assets/galleryImg4.jpg";
+import extraImg1 from "../assets/img1.webp";
+import extraImg2 from "../assets/img2.webp";
+import extraImg3 from "../assets/img3.webp";
+import extraImg5 from "../assets/img5.jpeg";
+import extraImg6 from "../assets/img6.jpeg";
+import extraImg7 from "../assets/img7.jpeg";
+import extraImg8 from "../assets/img8.jpeg";
+import extraImg9 from "../assets/img9.jpeg";
+import extraImg10 from "../assets/img10.jpeg";
+import extraImg11 from "../assets/img11.jpeg";
+import extraImg12 from "../assets/img12.jpeg";
+import extraImg13 from "../assets/img13.jpeg";
+import extraImg14 from "../assets/img14.jpeg";
 import painted from "../assets/painted.jpeg";
 import painter from "../assets/painter.jpeg";
 import painter1 from "../assets/painter1.jpeg";
 import painter2 from "../assets/painter2.jpeg";
 import video1 from "../assets/macvide (2).mp4";
 import video2 from "../assets/work.mp4";
+import video3 from "../assets/macvide.mp4";
+import video4 from "../assets/vid1.mp4";
+import video5 from "../assets/vid2.mp4";
+import video6 from "../assets/vid3.mp4";
 
-const images = [img1, img2, img3, img4, painted, painter, painter1, painter2];
-import { useNavigate } from "react-router-dom";
+const images = [
+  img1,
+  img2,
+  img3,
+  img4,
+  extraImg1,
+  extraImg2,
+  extraImg3,
+  extraImg5,
+  extraImg6,
+  extraImg7,
+  extraImg8,
+  extraImg9,
+  extraImg10,
+  extraImg11,
+  extraImg12,
+  extraImg13,
+  extraImg14,
+  painted,
+  painter,
+  painter1,
+  painter2,
+];
+const videos = [video1, video2, video3, video4, video5, video6];
 import Navbar from "./Navbar";
 
 const Home = () => {
-  const navigate = useNavigate();
   const [selectedImage, setSelectedImage] = useState(null);
   const scrollToSection = (id) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -170,6 +208,8 @@ const Home = () => {
                       src={img}
                       alt={`Gallery ${index + 1}`}
                       onClick={() => setSelectedImage(img)}
+                      loading="lazy"
+                      decoding="async"
                       className="cursor-pointer w-full h-64 object-cover transform group-hover:scale-110 transition-transform duration-500"
                     />
                   </div>
@@ -191,54 +231,35 @@ const Home = () => {
               </p>
             </div>
 
-            <div className="flex w-full flex-col lg:flex-row justify-center gap-6 overflow-hidden">
-              {/* Video 1 */}
-              <div className="flex justify-center overflow-hidden w-full">
-                <video
-                  ref={(el) => {
-                    if (el) {
-                      el.muted = true;
-                      el.volume = 0;
-                      el.autoplay = false;
+            <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+              {videos.map((video) => (
+                <div
+                  key={video}
+                  className="flex justify-center overflow-hidden w-full"
+                >
+                  <video
+                    ref={(el) => {
+                      if (el) {
+                        el.muted = true;
+                        el.volume = 0;
+                        el.autoplay = false;
 
-                      el.addEventListener("volumechange", () => {
-                        if (el.volume !== 0 || !el.muted) {
-                          el.muted = true;
-                          el.volume = 0;
-                        }
-                      });
-                    }
-                  }}
-                  muted={true}
-                  src={video1}
-                  controls
-                  className="cursor-pointer w-full h-64 object-cover rounded-2xl lg:h-94"
-                />
-              </div>
-
-              {/* Video 2 — SAME CODE */}
-              <div className="flex justify-center overflow-hidden w-full ">
-                <video
-                  ref={(el) => {
-                    if (el) {
-                      el.muted = true;
-                      el.volume = 0;
-                      el.autoplay = false;
-
-                      el.addEventListener("volumechange", () => {
-                        if (el.volume !== 0 || !el.muted) {
-                          el.muted = true;
-                          el.volume = 0;
-                        }
-                      });
-                    }
-                  }}
-                  muted={true}
-                  src={video2}
-                  controls
-                  className="cursor-pointer w-full h-64  lg:h-94  object-cover rounded-2xl"
-                />
-              </div>
+                        el.addEventListener("volumechange", () => {
+                          if (el.volume !== 0 || !el.muted) {
+                            el.muted = true;
+                            el.volume = 0;
+                          }
+                        });
+                      }
+                    }}
+                    muted={true}
+                    src={video}
+                    preload="none"
+                    controls
+                    className="cursor-pointer w-full h-64 object-cover rounded-2xl lg:h-94"
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -250,12 +271,14 @@ const Home = () => {
               <img
                 src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
                 alt="Industrial Workshop"
+                loading="lazy"
+                decoding="async"
                 className="rounded-lg shadow-2xl border-4 border-orange-500"
               />
             </div>
             <div className="md:w-1/2">
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                WHY CHOOSE AZ COATING SERVICCES ?
+                WHY CHOOSE AZ COATINGS SOLUTIONS?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -373,7 +396,7 @@ const Home = () => {
 
         {/* Footer */}
         <footer className="bg-gray-900 text-gray-400 py-8 text-center border-t border-gray-800">
-          <p>&copy; 2025 AZ COATING. All Rights Reserved.</p>
+          <p>&copy; 2025 AZ COATINGS SOLUTIONS. All Rights Reserved.</p>
           <p className="text-sm mt-2 flex items-center justify-center gap-1">
             Made with ❤️ by
             <a

@@ -1,12 +1,10 @@
 import React, { useEffect, useState } from "react";
 import logo from "../assets/logo.jpeg";
 import { Menu, X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
-  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setScrolled(window.scrollY > 50);
@@ -39,7 +37,7 @@ const Navbar = () => {
               scrolled ? "text-gray-900" : "text-white"
             } transition-colors duration-300 group-hover:opacity-90`}
           >
-            AZ COATING SOLUTIONS
+            AZ COATINGS SOLUTIONS
           </span>
         </div>
 

@@ -33,6 +33,8 @@ const Carousel = ({ interval = 3000 }) => {
             <img
               src={src}
               alt={`Slide ${idx + 1}`}
+              loading={idx === 0 ? 'eager' : 'lazy'}
+              decoding="async"
               className="w-full h-64 sm:h-80 md:h-96 lg:h-[500px] xl:h-[600px] object-cover rounded-lg"
             />
           </div>
