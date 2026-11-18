@@ -102,12 +102,12 @@ const Home = () => {
 
           <div className="container mx-auto px-4 relative z-20 text-center">
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-              PREMIUM INDUSTRIAL{" "}
-              <span className="text-orange-500">COATING</span> SOLUTIONS
+              INDUSTRIAL COATING SERVICES IN{" "}
+              <span className="text-orange-500">LUDHIANA</span>
             </h1>
             <p className="text-xl md:text-2xl mb-8 text-gray-300 max-w-2xl mx-auto">
-              Providing durable, high-quality powder coating and paint finishes
-              in Ludhiana since 1995.
+              Powder coating, liquid spray painting, and surface treatment in
+              Ludhiana, Punjab. Providing durable finishes since 1995.
             </p>
             <div className="flex flex-col md:flex-row gap-4 justify-center">
               <div
